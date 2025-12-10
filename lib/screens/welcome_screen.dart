@@ -30,7 +30,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   final style1=GoogleFonts.arima(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black);
   final style2=GoogleFonts.arima(fontSize: 15,color: Colors.black);
   @override
-
   void initState(){
     super.initState();
     controller=AnimationController(vsync: this,duration: Duration(seconds: 2));
@@ -53,18 +52,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
     ),
     );
   }
-  Widget content(){
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: 24),
-          child: PinCodeTextField(appContext: context, length: 6),
-        )
-      ],
-    );
-  }
-
 bool isVisible=false;
 void navigateToRegister(){
     Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Registerpage()));
